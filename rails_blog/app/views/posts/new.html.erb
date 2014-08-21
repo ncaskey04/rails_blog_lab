@@ -1,0 +1,21 @@
+this is for creating new posts
+
+<form action="/posts" method="post">
+
+  <label for="post[title]"></label>
+  <input type="text" name="post[title]" placeholder="title">
+
+  <label for="post[description]"></label>
+  <input type="text" name="post[description]" placeholder="description"></input>
+
+  <label for="post[author]"></label>
+  <input type="text" name="post[author]" placeholder="author">
+
+  <label for="tag[name]"></label>
+  <input type="text" name="tag[name]" placeholder="tag">
+
+	<%= token_tag form_authenticity_token %>
+
+  <button>Save Post</button>
+
+</form>
