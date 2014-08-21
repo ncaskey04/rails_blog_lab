@@ -5,10 +5,10 @@ class TagsController < ApplicationController
     render :index
   end
 
-  def create
-    new_tag = params.require(:tag).permit(:name)
-    Tag.create(new_tag)
-    redirect_to '/posts'
+  def show
+    # show title and author associated with a tag
+    
+    
   end
 
 
