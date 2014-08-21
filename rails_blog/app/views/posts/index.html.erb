@@ -1,4 +1,3 @@
-Hello Bloggers!
 
 <% @posts.each do |post| %>
   <div>
@@ -6,6 +5,9 @@ Hello Bloggers!
     <p><%= post.description %></p>
     <p><%= post.author %></p>
     <p><%= post.tags.map(&:name) %></p>
-    <a href="/posts/<%= post.id %>">Show</a>
+    <a href="/posts/<%= post.id %>">See more on this post</a>
   </div>
 <% end %>
+
+<a href="Create a new post"></a>
+<a href="See all tags"></a>

@@ -7,8 +7,11 @@ class TagsController < ApplicationController
 
   def show
     # show title and author associated with a tag
+    # look up post title and post author by id,
+    # then show each title and author for each tag
     
     
+
   end
 
 

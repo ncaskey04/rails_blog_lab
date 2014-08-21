@@ -1,18 +1,19 @@
-this is for creating new posts
+
+<h2>Create a new post</h2>
 
 <form action="/posts" method="post">
 
   <label for="post[title]"></label>
-  <input type="text" name="post[title]" placeholder="title">
+  <input type="text" name="post[title]" placeholder="title" autofocus required>
 
   <label for="post[description]"></label>
-  <input type="text" name="post[description]" placeholder="description"></input>
+  <input type="text" name="post[description]" placeholder="description" required></input>
 
   <label for="post[author]"></label>
-  <input type="text" name="post[author]" placeholder="author">
+  <input type="text" name="post[author]" placeholder="author" required>
 
   <label for="tag[name]"></label>
-  <input type="text" name="tag[name]" placeholder="tag">
+  <input type="text" name="tag[name]" placeholder="tag" required>
 
 	<%= token_tag form_authenticity_token %>
 
