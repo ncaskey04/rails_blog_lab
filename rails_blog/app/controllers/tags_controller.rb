@@ -7,7 +7,6 @@ class TagsController < ApplicationController
 
   def create
     new_tag = params.require(:tag).permit(:name)
-
     Tag.create(new_tag)
     redirect_to '/posts'
   end

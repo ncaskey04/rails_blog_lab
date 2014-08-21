@@ -7,7 +7,8 @@ class PostsController < ApplicationController
 
   def create
     new_post = params.require(:post).permit(:title, :description, :author)
-    Post.create(new_post)
+    new_tag = params.require(:tag).permit(:name)
+    Post.create(new_post).tags << Tag.find_or_create_by(name: new_tag[:name])
     redirect_to '/posts'
   end
 
