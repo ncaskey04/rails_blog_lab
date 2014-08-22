@@ -1,18 +1,13 @@
 class TagsController < ApplicationController
 
   def index
-    @tags = Tag.all
-    render :index
+    @all_tags = Tag.all.select do |tag|
+      tag.posts.length > 0
+    end
   end
 
   def show
-    # show title and author associated with a tag
-    # look up post title and post author by id,
-    # then show each title and author for each tag
-    
-    
-
+    @tag = Tag.find_by_id(params[:id])
   end
-
 
 end

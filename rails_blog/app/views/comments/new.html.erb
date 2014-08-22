@@ -1,0 +1,15 @@
+<h2>Create a new comment</h2>
+
+<form action="/posts/:post_id/comments" method="post">
+
+  <label for="name"></label>
+  <input type="text" name="comment[name]" placeholder="name" required>
+
+  <label for="description"></label>
+  <input type="text" name="comment[description]" placeholder="description" required>  
+
+	<%= token_tag form_authenticity_token %>
+
+  <button>Save Comment</button>
+
+</form>
